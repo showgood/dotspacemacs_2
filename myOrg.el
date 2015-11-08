@@ -2,6 +2,7 @@
 (setq org-startup-with-inline-images t)
 (setq org-agenda-files (quote ("~/Dropbox/org/gtd/"
                                "~/Dropbox/org/Inbox.org"
+                               "~/Dropbox/org/habit.org"
                                "~/Dropbox/org/birthday.org"
                                "~/codingOrg/Leetcode/index.org"
                                "~/myOrg/javascript/js.org")))
@@ -71,3 +72,7 @@
   (while (re-search-forward tag nil t)
     (add-text-properties (match-beginning 0) (point-at-eol)
                          `(face (:foreground ,col)))))
+; follow the link using enter
+(setq org-return-follows-link t)
+
+(setq org-agenda-start-on-weekday 0)

@@ -17,4 +17,9 @@
 (global-set-key (kbd "\C-cr") 'org-refile)
 ;; (global-set-key (kbd "Q") 'fill-paragraph) bad idea.. can't enter Q anymore
 (global-set-key (kbd "\C-cj") 'org-journal-new-entry)
-(global-set-key (kbd "<f9>") 'org-todo)
+(global-set-key (kbd "<f11>") 'org-todo)
+(global-set-key (kbd "<f10>") 'org-agenda)
+(global-set-key (kbd "<f9> c") 'calendar)
+(global-set-key (kbd "<f9> g") 'gnus)
+;; (global-set-key (kbd "<f9> s") 'gnus)
+(global-set-key (kbd "<f4>") 'org-clock-goto)

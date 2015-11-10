@@ -1,0 +1,16 @@
+(global-linum-mode t)
+(global-company-mode t)
+(load "~/dotspacemacs/myOrg.el")
+(set-face-attribute 'default nil :font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+(set-frame-font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1" nil t)
+(load "~/dotspacemacs/eshell.win.el")
+(desktop-save-mode 1)
+
+(load "~/dotspacemacs/abbrev")
+(load "~/dotspacemacs/shell_abbrev")
+(load "~/dotspacemacs/alias")
+(load "~/dotspacemacs/functions")
+(load "~/dotspacemacs/keys")
+(load "~/dotspacemacs/myCal")
+(load "~/dotspacemacs/runCurrentFile.el")
+

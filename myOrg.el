@@ -76,3 +76,13 @@
 (setq org-return-follows-link t)
 
 (setq org-agenda-start-on-weekday 0)
+
+;;http://doc.norang.ca/org-mode.html
+;; Remove empty LOGBOOK drawers on clock out
+(defun bh/remove-empty-drawer-on-clock-out ()
+  (interactive)
+  (save-excursion
+    (beginning-of-line 0)
+    (org-remove-empty-drawer-at "LOGBOOK" (point))))
+
+(add-hook 'org-clock-out-hook 'bh/remove-empty-drawer-on-clock-out 'append)

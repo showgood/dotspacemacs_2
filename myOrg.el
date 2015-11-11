@@ -86,3 +86,5 @@
     (org-remove-empty-drawer-at "LOGBOOK" (point))))
 
 (add-hook 'org-clock-out-hook 'bh/remove-empty-drawer-on-clock-out 'append)
+(require 'org-contacts)
+(setq org-contacts-files (quote ("~/Dropbox/org/contacts.org")))

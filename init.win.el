@@ -183,74 +183,7 @@ before layers configuration."
 layers configuration."
 )
 
-(defun prelude-copy-file-name-to-clipboard ()
-  "Copy the current buffer file name to the clipboard."
-  (interactive)
-  (let ((filename (if (equal major-mode 'dired-mode)
-                      default-directory
-                    (buffer-file-name))))
-
-    ;; (let a (buffer-name))
-    ;; (message a)
-    (let ext (file-name-extension filename))
-    (message ext)
-    (when filename
-      (kill-new filename)
-      (message "Copied buffer file name '%s' to the clipboard." filename))))
-
 (desktop-save-mode 1)
-
-;; copy whole line without selection
-;; http://emacs-fu.blogspot.com.au/2009/11/copying-lines-without-selecting-them.html
-(defadvice kill-ring-save (before slick-copy activate compile) "When called
-  interactively with no active region, copy a single line instead."
-    (interactive (if mark-active (list (region-beginning) (region-end)) (message
-        "Copied line") (list (line-beginning-position) (line-beginning-position
-    2)))))
-
-(defadvice kill-region (before slick-cut activate compile)
-  "When called interactively with no active region, kill a single line instead."
-  (interactive
-   (if mark-active (list (region-beginning) (region-end))
-     (list (line-beginning-position)
-           (line-beginning-position 2)))))
-
-(defun Open ()
-  "Show current file in desktop (OS's file manager).
-URL `http://ergoemacs.org/emacs/emacs_dired_open_file_in_ext_apps.html'
-Version 2015-06-12"
-  (interactive)
-  (cond
-   ((string-equal system-type "windows-nt")
-    (w32-shell-execute "explore" (replace-regexp-in-string "/" "\\" default-directory t t)))
-   ((string-equal system-type "darwin") (shell-command "open ."))
-   ((string-equal system-type "gnu/linux")
-    (let ((process-connection-type nil)) (start-process "" nil "xdg-open" "."))
-    ;; (shell-command "xdg-open .") ;; 2013-02-10 this sometimes froze emacs till the folder is closed. ⁖ with nautilus
-    )))
-
-;; insert current time
-;; source: http://emacswiki.org/emacs/InsertingTodaysDate
-(defun nnow ()
-  (interactive)
-  (insert (format-time-string "%Y-%b-%d %H:%M:%S")))
-
-;; insert today date
-(defun ddate ()
-  (interactive)
-  (insert (format-time-string "%Y-%b-%d")))
-(require 'ido) ; part of emacs
-
-
-(load "~/dotspacemacs/hot-filelist")
-(defun xah-open-file-fast ()
-  "Prompt to open a file from `hot-filelist'.
-URL `http://ergoemacs.org/emacs/emacs_hotkey_open_file_fast.html'
-Version 2015-04-23"
-  (interactive)
-  (let ((ξabbrevCode
-         (ido-completing-read "Open:" (mapcar (lambda (ξx) (car ξx)) hot-filelist))))
-    (find-file (cdr (assoc ξabbrevCode hot-filelist)))))
 
 (load "~/dotspacemacs/abbrev")
 (load "~/dotspacemacs/shell_abbrev")
@@ -263,3 +196,16 @@ Version 2015-04-23"
 ;(company-ycmd-setup)
 ;; (set-variable 'ycmd-global-config "c:/wxm/soft/ycmd/cpp/ycm/.ycm_extra_conf.py")  
 (setq w32-pipe-read-delay 0)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(paradox-github-token t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))

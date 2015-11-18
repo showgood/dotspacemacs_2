@@ -45,6 +45,11 @@
                "* Appointment with %? :APPOINTMENT:\n%U" :clock-in t :clock-resume t)
               ("p" "Phone call" entry (file "~/Dropbox/org/Inbox.org")
                "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
+              ("c" "Contacts" entry (file "~/Dropbox/org/contacts.org")
+                "* %(org-contacts-template-name)
+                :PROPERTIES:
+                :EMAIL: %(org-contacts-template-email)
+                :END:")
               ("h" "Habit" entry (file "~/Dropbox/org/Inbox.org")
                "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
                                         ; Targets include this file and any file contributing to the agenda - up to 9 levels deep

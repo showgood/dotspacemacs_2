@@ -114,3 +114,28 @@ Version 2015-04-23"
   (interactive)
   (find-file "~/myOrg")
   )
+
+;;soure:https://github.com/redguardtoo/emacs.d/blob/master/lisp/init-clipboard.el
+(defun cp-filename-of-current-buffer ()
+  "Copy file name (NOT full path) into the yank ring and OS clipboard"
+  (interactive)
+  (let (filename)
+    (when buffer-file-name
+      (setq filename (file-name-nondirectory buffer-file-name))
+      (kill-new filename)
+      (message "filename %s => clipboard & yank ring" filename))))
+
+(defun prelude-copy-file-name-to-clipboard ()
+  "Copy the current buffer file name to the clipboard."
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+
+    ;; (let a (buffer-name))
+    ;; (message a)
+    (let ext (file-name-extension filename))
+    (message ext)
+    (when filename
+      (kill-new filename)
+      (message "Copied buffer file name '%s' to the clipboard." filename))))

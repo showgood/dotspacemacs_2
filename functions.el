@@ -116,6 +116,7 @@ Version 2015-04-23"
   )
 
 ;;soure:https://github.com/redguardtoo/emacs.d/blob/master/lisp/init-clipboard.el
+;; only copy file name (not including path)
 (defun cp-filename-of-current-buffer ()
   "Copy file name (NOT full path) into the yank ring and OS clipboard"
   (interactive)
@@ -125,6 +126,8 @@ Version 2015-04-23"
       (kill-new filename)
       (message "filename %s => clipboard & yank ring" filename))))
 
+
+;; this copy full path
 (defun prelude-copy-file-name-to-clipboard ()
   "Copy the current buffer file name to the clipboard."
   (interactive)

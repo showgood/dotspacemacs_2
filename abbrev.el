@@ -14,15 +14,17 @@
     ("stmt" "statement")
     ("sb" "somebody")
     ("sth" "something")
+    ("8par" "parramatta")
+    ("stc" "statistic")
+    ("8as" "assignment")
 
     ;; coding
     ("ustd" "using namespace std;")
 
     ;; computing tech
-    ("8wp" "Wikipedia")
+    ("wp" "Wikipedia")
     ("8ms" "Microsoft")
     ("8g" "Google")
-    ("8it" "IntelliType")
     ("8msw" "Microsoft Windows")
     ("8win" "Windows")
     ("8ie" "Internet Explorer")
@@ -39,7 +41,6 @@
     ("8var" "variable")
     ("8ev" "environment variable")
     ("8cp" "computer")
-    ("sth", "something")
 
     ;; emacs regex
     ("8d" "\\([0-9]+?\\)")

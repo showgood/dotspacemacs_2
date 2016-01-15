@@ -15,7 +15,7 @@
 (setq org-archive-location "~/Dropbox/org/logbook.org::* Archived")
 
 (setq org-ditaa-jar-path "~/soft/ditaa0_9.jar")
-(setq org-plantuml-jar-path "~/soft/plantuml.8031.jar")
+(setq org-plantuml-jar-path "~/soft/plantuml.8033.jar")
 (org-babel-do-load-languages
  'org-babel-load-languages
  '( (perl . t)

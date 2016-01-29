@@ -18,7 +18,7 @@
 (global-set-key (kbd "<f7> h") 'xah-open-file-fast)
 (global-set-key (kbd "<f7> r") 'org-refile)
 
-(global-set-key (kbd "<f8>") 'split-window-below)
+(global-set-key (kbd "<f8>") 'delete-window)
 
 (global-set-key (kbd "<f9> b") 'helm-mini)
 (global-set-key (kbd "<f9> f") 'spacemacs/helm-find-files)

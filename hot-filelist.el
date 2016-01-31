@@ -8,5 +8,7 @@
         ("emacs" . "~/myOrg/emacs" )
         ("dotfiles" . "~/dotspacemacs/" )
         ("coding" . "~/codingOrg/" )
+        ("sleep" . "~/Dropbox/org/sleep.org")
+        ("learning" . "~/learningOrg/")
         ;; more here
         ) )

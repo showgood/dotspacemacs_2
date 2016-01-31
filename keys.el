@@ -15,7 +15,7 @@
 (global-set-key (kbd "<f7> l") (lambda () (interactive) (list-matching-lines (current-word))))
 
 ;open a list of hot file
-(global-set-key (kbd "<f7> h") 'xah-open-file-fast)
+(global-set-key (kbd "<f7> f") 'xah-open-file-fast)
 (global-set-key (kbd "<f7> r") 'org-refile)
 
 (global-set-key (kbd "<f8>") 'delete-window)

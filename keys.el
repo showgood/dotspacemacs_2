@@ -2,9 +2,22 @@
 (global-set-key (kbd "<f3>") 'org-clock-in)
 (global-set-key (kbd "<f4>") 'org-clock-out)
 
-(global-set-key (kbd "<f5> c") 'compile)
-(global-set-key (kbd "<f5> r") 'recompile)
-(global-set-key (kbd "<f6>") 'helm-mini)
+(global-set-key (kbd "<f5>") 'helm-mini)
+(global-set-key (kbd "<f6> c") 'projectile-compile-project)
+(global-set-key (kbd "<f6> r") 'recompile)
+
+;; open the file under cursor within project (C-c p g)
+(global-set-key (kbd "<f6> g") 'projectile-find-file-dwim)
+(global-set-key (kbd "<f6> o") 'projectile-find-file-dwim-other-window)
+
+;; list the buffers for project
+(global-set-key (kbd "<f6> b") 'helm-projectile)
+
+;; run vc on root directory of project
+(global-set-key (kbd "<f6> v") 'projectile-vc)
+
+;; find directory within project
+(global-set-key (kbd "<f6> d") 'helm-projectile-find-dir)
 
 (global-set-key (kbd "<f7> c") 'calendar)
 (global-set-key (kbd "<f7> g") 'gnus)
@@ -17,6 +30,7 @@
 ;open a list of hot file
 (global-set-key (kbd "<f7> f") 'xah-open-file-fast)
 (global-set-key (kbd "<f7> r") 'org-refile)
+(global-set-key (kbd "<f7> a") 'org-archive-subtree)
 
 (global-set-key (kbd "<f8>") 'delete-window)
 
@@ -29,6 +43,7 @@
 (global-set-key (kbd "<f9> q") 'fill-paragraph)
 (global-set-key (kbd "<f9> k") 'my-key-binds)
 (global-set-key (kbd "<f9> c") 'cp-filename-of-current-buffer)
+(global-set-key (kbd "<f9> s") 'spacemacs/helm-project-do-ag)
 
 (global-set-key (kbd "<f10>") 'org-capture)
 (global-set-key (kbd "<f11>") 'org-agenda)

@@ -5,6 +5,8 @@
 (set-frame-font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1" nil t)
 (load "~/dotspacemacs/eshell.win.el")
 (desktop-save-mode 1)
+(setq helm-projectile-fuzzy-match nil)
+(setq projectile-other-file-alist '("cpp" "h" "hpp" "ipp"))
 
 (load "~/dotspacemacs/abbrev")
 (load "~/dotspacemacs/shell_abbrev")

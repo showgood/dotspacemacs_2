@@ -1,3 +1,4 @@
+(add-to-list 'load-path "~/dotspacemacs/bookmark-plus/")
 (global-linum-mode t)
 (global-company-mode t)
 (load "~/dotspacemacs/myOrg.el")
@@ -6,7 +7,7 @@
 (load "~/dotspacemacs/eshell.win.el")
 (desktop-save-mode 1)
 (setq helm-projectile-fuzzy-match nil)
-(setq projectile-other-file-alist '("cpp" "h" "hpp" "ipp"))
+;; (setq projectile-other-file-alist '("cpp" "h" "hpp" "ipp"))
 
 (load "~/dotspacemacs/abbrev")
 (load "~/dotspacemacs/shell_abbrev")
@@ -15,4 +16,9 @@
 (load "~/dotspacemacs/keys")
 (load "~/dotspacemacs/myCal")
 (load "~/dotspacemacs/runCurrentFile.el")
+(load "~/dotspacemacs/dired+.el")
+(load "~/dotspacemacs/switch-window.el")
+(load "~/dotspacemacs/ggtags.el")
 
+(require 'switch-window)
+(require 'bookmark+)

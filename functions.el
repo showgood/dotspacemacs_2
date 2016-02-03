@@ -142,3 +142,22 @@ Version 2015-04-23"
     (when filename
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
+
+;; copy whole line
+;; http://stackoverflow.com/questions/88399/how-do-i-duplicate-a-whole-line-in-emacs
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+)
+
+(defun my-join-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (next-line 1)
+  (delete-indentation)
+)

@@ -2,7 +2,7 @@
 
 (setq hot-filelist
       '(
-        ("leetcode" . "~/coding/Leetcode" )
+        ("ltcode" . "~/coding/Leetcode" )
         ("notes" . "~/notes" )
         ("org" . "~/myOrg" )
         ("emacs" . "~/myOrg/emacs" )
@@ -10,5 +10,6 @@
         ("coding" . "~/codingOrg/" )
         ("sleep" . "~/Dropbox/org/sleep.org")
         ("learning" . "~/learningOrg/")
+        ("Desktop" . "c:/users/xiaomingw/Desktop")
         ;; more here
         ) )

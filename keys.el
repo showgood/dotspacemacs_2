@@ -2,7 +2,7 @@
 (global-set-key (kbd "<f3>") 'org-clock-in)
 (global-set-key (kbd "<f4>") 'org-clock-out)
 
-(global-set-key (kbd "<f5>") 'helm-mini)
+;; (global-set-key (kbd "<f5>") 'helm-mini)
 ;; join line (M-^)
 ;; (global-set-key (kbd "<f9> j") 'delete-indentation)
 (global-set-key (kbd "<f5> j") 'my-join-line)
@@ -20,7 +20,7 @@
 (global-set-key (kbd "<f6> f") 'helm-projectile-find-file)
 ;; open the file under cursor within project (C-c p g)
 (global-set-key (kbd "<f6> g") 'helm-projectile-find-file-dwim)
-(global-set-key (kbd "<f6> o") 'helm-projectile-find-file-dwim-other-window)
+(global-set-key (kbd "<f6> o") 'projectile-find-file-dwim-other-window)
 ; list all the reference for the current symbol at point
 (global-set-key (kbd "<f6> r") 'helm-gtags-find-rtag)
 ;; search through project with grep
@@ -32,6 +32,7 @@
 
 (global-set-key (kbd "<f7> a") 'org-archive-subtree)
 (global-set-key (kbd "<f7> c") 'calendr)
+(global-set-key (kbd "<f7> d") 'delete-window)
 ;open a list of hot file
 (global-set-key (kbd "<f7> f") 'xah-open-file-fast)
 (global-set-key (kbd "<f7> g") 'gnus)
@@ -42,7 +43,8 @@
 ;open a list of shell abbreviation
 (global-set-key (kbd "<f7> s") 'xah-shell-commands)
 
-(global-set-key (kbd "<f8>") 'delete-window)
+;; (global-set-key (kbd "<f8>") 'delete-window)
+(global-set-key (kbd "<f8>") 'helm-projectile-find-file)
 
 (global-set-key (kbd "<f9> b") 'helm-mini)
 ; copy the filename(without path) for current buffer
@@ -71,3 +73,6 @@
 (global-set-key (kbd "\C-cl") 'org-store-link)
 (global-set-key (kbd "\C-cr") 'org-refile)
 (global-set-key (kbd "\C-cj") 'org-journal-new-entry)
+
+;; jump to the definition
+(global-set-key (kbd "<C-return>") 'helm-gtags-find-tag)

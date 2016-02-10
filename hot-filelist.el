@@ -9,6 +9,7 @@
         ("dotfiles" . "~/dotspacemacs/" )
         ("coding" . "~/codingOrg/" )
         ("sleep" . "~/Dropbox/org/sleep.org")
+        ("gym" . "~/Dropbox/org/gym.org")
         ("learning" . "~/learningOrg/")
         ("Desktop" . "c:/users/xiaomingw/Desktop")
         ;; more here

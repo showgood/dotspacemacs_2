@@ -31,7 +31,7 @@
 (global-set-key (kbd "<f6> v") 'projectile-vc)
 
 (global-set-key (kbd "<f7> a") 'org-archive-subtree)
-(global-set-key (kbd "<f7> c") 'calendr)
+(global-set-key (kbd "<f7> c") 'calendar)
 (global-set-key (kbd "<f7> d") 'delete-window)
 ;open a list of hot file
 (global-set-key (kbd "<f7> f") 'xah-open-file-fast)

@@ -26,7 +26,7 @@
     ("df" "difficulty")
     ("az" "always")
     ("ow" "otherwise")
-    ("8ex" "exercise")
+    ("exr" "exercise")
     ("8me" "meditation")
     ("8pr" "probably")
     ("8gr" "guarantee")
@@ -34,6 +34,10 @@
     ("8pro" "property")
     ("8rl" "relative")
     ("8ab" "absolute")
+    ("woo" "woolworths")
+    ("citi" "citibank")
+    ("8cr" "credit card repayment")
+    ("elec" "electricity")
 
     ;; coding
     ("ustd" "using namespace std;")

@@ -12,3 +12,4 @@
 (load "~/dotspacemacs/functions")
 (load "~/dotspacemacs/keys")
 (load "~/dotspacemacs/myCal")
+(load "~/dotspacemacs/switch-window.el")

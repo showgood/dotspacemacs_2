@@ -23,5 +23,5 @@
 (require 'switch-window)
 (require 'bookmark+)
 
-()
 (setq projectile-project-compilation-cmd "cd build && make -j")
+(setq projectile-enable-caching t)

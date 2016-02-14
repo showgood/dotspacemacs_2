@@ -25,6 +25,7 @@
     (sh . t)
     (python . t)
     (dot . t)
+    (js . t)
     (emacs-lisp . t)
     ))
 
@@ -54,10 +55,6 @@
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                  (org-agenda-files :maxlevel . 9))))
 
-;http://orgmode.org/manual/Code-evaluation-security.html
-(defun my-org-confirm-babel-evaluate (lang body)
-  (not (string= lang "ditaa")))  ; don't ask for ditaa
-(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
 
 ;; http://dept.stat.lsa.umich.edu/~jerrick/org_agenda_calendar.html
 ;; (add-hook 'org-finalize-agenda-hook
@@ -90,3 +87,10 @@
 (add-hook 'org-clock-out-hook 'bh/remove-empty-drawer-on-clock-out 'append)
 (require 'org-contacts)
 (setq org-contacts-files (quote ("~/Dropbox/org/contacts.org")))
+
+(setq org-confirm-babel-evaluate nil)
+;; (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
+
+;http://orgmode.org/manual/Code-evaluation-security.html
+(defun my-org-confirm-babel-evaluate (lang body)
+  (not (string= lang "ditaa")))  ; don't ask for ditaa

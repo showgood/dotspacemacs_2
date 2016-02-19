@@ -174,3 +174,12 @@ Version 2015-06-12"
   ;; (w32-shell-execute "open" "TortoiseProc.exe /command:repostatus /path:"  (replace-regexp-in-string "/" "\\" default-directory t t))
   ;; (w32-shell-execute "open" "TortoiseProc.exe" "/command:repostatus /path: " "c:/workarea/AHSW-162")
 )
+
+;; from AbcDef ==> Abc_Def
+(defun split-name (s)
+  (split-string
+   (let ((case-fold-search nil))
+     (downcase
+      (replace-regexp-in-string "\\([a-z]\\)\\([A-Z]\\)" "\\1 \\2" s)))
+   "[^A-Za-z0-9]+"))
+(defun underscore-string (s) (mapconcat 'downcase   (split-name s) "_"))

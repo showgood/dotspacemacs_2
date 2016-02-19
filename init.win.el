@@ -32,7 +32,7 @@
      git
      pandoc
      org
-     gnus
+     ;; gnus
      (c-c++ :variables c-c++-enable-clang-support t)
      ;; shell
      ;; ycmd

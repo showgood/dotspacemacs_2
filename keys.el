@@ -76,3 +76,4 @@
 
 ;; jump to the definition
 (global-set-key (kbd "<C-return>") 'helm-gtags-find-tag)
+

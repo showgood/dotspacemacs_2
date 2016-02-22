@@ -25,6 +25,7 @@
     (sh . t)
     (python . t)
     (dot . t)
+    (C . t)
     (js . t)
     (emacs-lisp . t)
     ))

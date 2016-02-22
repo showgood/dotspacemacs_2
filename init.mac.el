@@ -30,6 +30,9 @@
      emacs-lisp
      git
      search-engine
+     javascript
+     themes-megapack
+     html
      ;; markdown
      org
      ;; (shell :variables

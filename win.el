@@ -19,6 +19,7 @@
 (load "~/dotspacemacs/dired+.el")
 (load "~/dotspacemacs/switch-window.el")
 (load "~/dotspacemacs/ggtags.el")
+(load "~/dotspacemacs/keyfreq.el")
 
 (require 'switch-window)
 (require 'bookmark+)

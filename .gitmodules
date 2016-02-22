@@ -1,3 +1,9 @@
 [submodule "indent-guide"]
 	path = indent-guide
 	url = https://github.com/zk-phi/indent-guide
+[submodule "visual-regexp"]
+	path = visual-regexp
+	url = https://github.com/benma/visual-regexp.el
+[submodule "visual-regexp-steroids"]
+	path = visual-regexp-steroids
+	url = https://github.com/benma/visual-regexp-steroids.el/

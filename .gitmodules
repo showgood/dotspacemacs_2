@@ -7,3 +7,6 @@
 [submodule "visual-regexp-steroids"]
 	path = visual-regexp-steroids
 	url = https://github.com/benma/visual-regexp-steroids.el/
+[submodule "helm-dash"]
+	path = helm-dash
+	url = https://github.com/areina/helm-dash

@@ -20,9 +20,11 @@
 (load "~/dotspacemacs/switch-window.el")
 (load "~/dotspacemacs/ggtags.el")
 (load "~/dotspacemacs/keyfreq.el")
-
+(load "~/dotspacemacs/helm-dash/helm-dash.el")
+(load "~/dotspacemacs/typeless.el")
+(load "~/dotspacemacs/sr-speedbar.el")
 (require 'switch-window)
 (require 'bookmark+)
-
+(require 'sr-speedbar)
 (setq projectile-project-compilation-cmd "cd build && make -j")
 (setq projectile-enable-caching t)

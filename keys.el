@@ -1,3 +1,6 @@
+(global-set-key (kbd "C-x C-m") 'helm-M-x)
+(global-set-key (kbd "C-c C-m") 'helm-M-x)
+
 (global-set-key (kbd "<f2>") 'org-clock-goto)
 (global-set-key (kbd "<f3>") 'org-clock-in)
 (global-set-key (kbd "<f4>") 'org-clock-out)
@@ -12,7 +15,7 @@
 ;; toggle between hpp and cpp
 (global-set-key (kbd "<f6> a") 'helm-projectile-find-other-file)
 ;; list the buffers for project
-(global-set-key (kbd "<f6> b") 'helm-projectile)
+(global-set-key (kbd "<f6> b") 'helm-projectile-switch-to-buffer)
 ;; find directory within project
 (global-set-key (kbd "<f6> c") 'projectile-compile-project)
 (global-set-key (kbd "<f6> d") 'helm-projectile-find-dir)

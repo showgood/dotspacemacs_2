@@ -5,7 +5,7 @@
                                "~/Dropbox/org/habit.org"
                                "~/Dropbox/org/birthday.org"
                                "~/codingOrg/Leetcode/index.org"
-                               "~/myOrg/javascript/js.org")))
+                               "~/notesOrg/javascript/js.org")))
 (load "~/dotspacemacs/org-journal.el")
 (setq org-journal-dir "~/Dropbox/org/journalOrg/")
 (setq org-directory "~/Dropbox/org")

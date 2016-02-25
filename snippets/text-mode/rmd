@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: common vocabulary for rmd
+# key: rmd
+# --
+${2:$$(yas-choose-value '("acceptance criteria"
+"relative trigger" "absolute trigger"
+"sensitivity" "single with valve" "dual with valve"
+"single passive" "circuit type" "patient type"
+"setting manager" "setting model"))}

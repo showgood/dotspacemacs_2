@@ -32,7 +32,8 @@
      git
      pandoc
      org
-     ;; gnus
+     html
+     ;;gnus
      (c-c++ :variables c-c++-enable-clang-support t)
      ;; shell
      ;; ycmd
@@ -44,7 +45,7 @@
      (colors :variables
              colors-enable-nyan-cat-progress-bar t)
      version-control
-     irony-mode
+     gtags
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -68,7 +69,7 @@ before layers configuration."
   (setq-default
    ;; Either `vim' or `emacs'. Evil is always enabled but if the variable
    ;; is `emacs' then the `holy-mode' is enabled at startup.
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
    ;; If non nil output loading progress in `*Messages*' buffer.
    dotspacemacs-verbose-loading nil
    ;; Specify the startup banner. Default value is `official', it displays
@@ -84,13 +85,13 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(solarized-light
+   dotspacemacs-themes '(zenburn
+                         solarized-light
                          solarized-dark
                          spacemacs-light
                          spacemacs-dark
                          leuven
-                         monokai
-                         zenburn)
+                         monokai)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -177,18 +178,23 @@ before layers configuration."
 
 (defun dotspacemacs/user-config ()
   (load "~/dotspacemacs/win.el")
+  (load "~/dotspacemacs/company.el")
   ;; syntax highlight
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 )
 
-(desktop-save-mode 1)
+;; (desktop-save-mode 1)
 
 (load "~/dotspacemacs/abbrev")
 (load "~/dotspacemacs/shell_abbrev")
 (load "~/dotspacemacs/alias")
 (load "~/dotspacemacs/windows")
+(load "~/dotspacemacs/gnus")
+(load "~/dotspacemacs/indent-guide/indent-guide")
+(load "~/dotspacemacs/visual-regexp.el/visual-regexp.el")
+(load "~/dotspacemacs/visual-regexp-steroids.el/visual-regexp-steroids.el")
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 ;; (set-variable 'ycmd-server-command '("python" "c:/wxm/soft/ycmd/ycmd"))
@@ -201,6 +207,10 @@ layers configuration."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/.cache/bookmarks")
+ '(org-agenda-files
+   (quote
+    ("c:/wxm/Dropbox/org/gtd/someday.org" "c:/wxm/Dropbox/org/gtd/tmm.org" "c:/wxm/Dropbox/org/gtd/todo.org" "c:/wxm/Dropbox/org/gtd/work.org" "~/Dropbox/org/Inbox.org" "~/Dropbox/org/habit.org" "~/Dropbox/org/birthday.org" "~/codingOrg/Leetcode/index.org")))
  '(paradox-github-token t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

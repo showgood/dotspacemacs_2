@@ -10,3 +10,9 @@
 [submodule "helm-dash"]
 	path = helm-dash
 	url = https://github.com/areina/helm-dash
+[submodule "function-args"]
+	path = function-args
+	url = https://github.com/abo-abo/function-args
+[submodule "hydra"]
+	path = hydra
+	url = https://github.com/abo-abo/hydra

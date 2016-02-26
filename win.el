@@ -28,3 +28,8 @@
 (require 'sr-speedbar)
 (setq projectile-project-compilation-cmd "cd build && make -j")
 (setq projectile-enable-caching t)
+
+(add-to-list 'load-path "~/dotspacemacs/function-args")
+(require 'function-args)
+(fa-config-default)
+(load "~/dotspacemacs/myhydra.el")

@@ -19,21 +19,24 @@
 (load "~/dotspacemacs/dired+.el")
 (load "~/dotspacemacs/visual-regexp/visual-regexp.el")
 (load "~/dotspacemacs/visual-regexp-steroids/visual-regexp-steroids.el")
+(load "~/dotspacemacs/helm-dash/helm-dash.el")
+(load "~/dotspacemacs/typeless.el")
+(load "~/dotspacemacs/myhydra.el")
 
 (require 'keyfreq)
 (keyfreq-mode 1)
 (keyfreq-autosave-mode 1)
 
-(require 'company)
+;; (require 'company)
 
-;; (add-hook 'after-init-hook 'global-company-mode)
+;; ;; (add-hook 'after-init-hook 'global-company-mode)
 
-;; ;; Don't enable company-mode in below major modes, OPTIONAL
-(setq company-global-modes '(not eshell-mode comint-mode erc-mode rcirc-mode))
-(setq company-ispell-dictionary (file-truename "~/dotspacemacs/english-words.txt"))
+;; ;; ;; Don't enable company-mode in below major modes, OPTIONAL
+;; (setq company-global-modes '(not eshell-mode comint-mode erc-mode rcirc-mode))
+;; (setq company-ispell-dictionary (file-truename "~/dotspacemacs/english-words.txt"))
 
-(add-to-list 'company-backends 'company-ispell)
-(add-to-list 'company-backends-org-mode 'company-ispell)
+;; (add-to-list 'company-backends 'company-ispell)
+;; (add-to-list 'company-backends-org-mode 'company-ispell)
 ;; ;; "text-mode" is a major mode for editing files of text in a human language"
 ;; ;; most major modes for non-programmers inherit from text-mode
 ;; (defun text-mode-hook-setup ()

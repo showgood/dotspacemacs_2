@@ -3,7 +3,7 @@
 
 (global-set-key
  (kbd "C-p")
- (defhydra hydra-move
+ (defhydra hydra-project
    (:body-pre (helm-projectile-switch-project))
    "project"
    ("a" projectile-toggle-between-implementation-and-test)

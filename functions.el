@@ -183,3 +183,14 @@ Version 2015-06-12"
       (replace-regexp-in-string "\\([a-z]\\)\\([A-Z]\\)" "\\1 \\2" s)))
    "[^A-Za-z0-9]+"))
 (defun underscore-string (s) (mapconcat 'downcase   (split-name s) "_"))
+
+;;http://www.josephlisee.com/2015/02/21/exploring-clang-format/
+(defun clang-format-before-save ()
+  "Add this to .emacs to clang-format on save
+ (add-hook 'before-save-hook 'clang-format-before-save)."
+
+  (interactive)
+  (when (eq major-mode 'c++-mode) (clang-format-buffer)))
+
+;; Install hook to use clang-format on save
+(add-hook 'before-save-hook 'clang-format-before-save)

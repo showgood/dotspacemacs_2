@@ -80,3 +80,9 @@
 ;; jump to the definition
 (global-set-key (kbd "<C-return>") 'helm-gtags-find-tag)
 
+(global-set-key (kbd "\C-xy") 'spacemacs/copy-whole-buffer-to-clipboard)
+(global-set-key (kbd "\C-xp") 'spacemacs/copy-clipboard-to-whole-buffer)
+(global-set-key (kbd "\C-xc") 'avy-goto-char-2)
+(global-set-key (kbd "\C-xt") 'cp-filename-of-current-buffer)
+; doesn't work
+;; (global-set-key (kbd "SPC f n") 'cp-filename-of-current-buffer)

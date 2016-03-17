@@ -4,7 +4,6 @@
 (set-face-attribute 'default nil :font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 (set-frame-font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1" nil t)
 (load "~/dotspacemacs/eshell.mac.el")
-(desktop-save-mode 1)
 
 (load "~/dotspacemacs/abbrev")
 (load "~/dotspacemacs/runCurrentFile.el")
@@ -15,7 +14,6 @@
 (load "~/dotspacemacs/myCal")
 (load "~/dotspacemacs/switch-window.el")
 ;; (load "~/dotspacemacs/company.el")
-(load "~/dotspacemacs/keyfreq.el")
 (load "~/dotspacemacs/dired+.el")
 (load "~/dotspacemacs/visual-regexp/visual-regexp.el")
 (load "~/dotspacemacs/visual-regexp-steroids/visual-regexp-steroids.el")
@@ -23,10 +21,12 @@
 (load "~/dotspacemacs/typeless.el")
 (load "~/dotspacemacs/myhydra.el")
 
+(load "~/dotspacemacs/keyfreq.el")
 (require 'keyfreq)
 (keyfreq-mode 1)
 (keyfreq-autosave-mode 1)
 
+(load "~/dotspacemacs/projectile.el")
 ;; (require 'company)
 
 ;; ;; (add-hook 'after-init-hook 'global-company-mode)

@@ -1,24 +1,24 @@
 (add-to-list 'load-path "~/dotspacemacs/hydra")
 (require 'hydra)
 
-(global-set-key
- (kbd "C-p")
- (defhydra hydra-project
-   (:body-pre (helm-projectile-switch-project))
-   "project"
-   ("a" projectile-toggle-between-implementation-and-test)
-   ("b" helm-projectile-switch-to-buffer)
-   ("c" projectile-compile-project)
-   ("d" helm-projectile-find-dir)
-   ("f" helm-projectile-find-file)
-   ("g" helm-projectile-find-file-dwim)
-   ("p" helm-projectile-switch-project)
-   ("r" helm-gtags-find-rtag)
-   ("t" helm-gtags-find-tag)
-   ("s" avy-goto-char-2)
-   ("x" save-buffer)
-   ("o" switch-window)
-   ("v" projectile-vc)))
+;; (global-set-key
+;;  (kbd "C-p")
+;;  (defhydra hydra-project
+;;    (:body-pre (helm-projectile-switch-project))
+;;    "project"
+;;    ("a" projectile-toggle-between-implementation-and-test)
+;;    ("b" helm-projectile-switch-to-buffer)
+;;    ("c" projectile-compile-project)
+;;    ("d" helm-projectile-find-dir)
+;;    ("f" helm-projectile-find-file)
+;;    ("g" helm-projectile-find-file-dwim)
+;;    ("p" helm-projectile-switch-project)
+;;    ("r" helm-gtags-find-rtag)
+;;    ("t" helm-gtags-find-tag)
+;;    ("s" avy-goto-char-2)
+;;    ("x" save-buffer)
+;;    ("o" switch-window)
+;;    ("v" projectile-vc)))
 
 ;;https://github.com/abo-abo/hydra/wiki/Emacs
 ;; I tweak a bit to map to the vi keybinding
@@ -34,6 +34,8 @@
    ("w" forward-word)
    ("b" backward-word)
    ("a" beginning-of-line)
+   ("d" delete-char)
+   ("D" kill-word)
    ("e" move-end-of-line)
    ("v" scroll-up-command)
    ("s" avy-goto-char-2)

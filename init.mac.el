@@ -26,6 +26,7 @@
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-private-snippets-directory nil)
      eyebrowse
+     (c-c++ :variables c-c++-enable-clang-support t)
      ;; better-defaults
      emacs-lisp
      git

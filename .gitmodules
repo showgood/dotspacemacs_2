@@ -16,3 +16,9 @@
 [submodule "hydra"]
 	path = hydra
 	url = https://github.com/abo-abo/hydra
+[submodule "crux"]
+	path = crux
+	url = https://github.com/bbatsov/crux
+[submodule "super-save"]
+	path = super-save
+	url = https://github.com/bbatsov/super-save

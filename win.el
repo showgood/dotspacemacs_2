@@ -23,14 +23,15 @@
 (require 'bookmark+)
 (require 'sr-speedbar)
 
-(add-to-list 'load-path "~/dotspacemacs/function-args")
-(require 'function-args)
-(fa-config-default)
 (load "~/dotspacemacs/myhydra.el")
-
 (load "~/dotspacemacs/keyfreq.el")
 (require 'keyfreq)
 (keyfreq-mode 1)
 (keyfreq-autosave-mode 1)
 
 (load "~/dotspacemacs/projectile.el")
+(load "~/dotspacemacs/cpp.el")
+;; (load "~/dotspacemacs/super-save/super-save.el")
+
+;; (super-save-mode +1)
+;; (setq super-save-auto-save-when-idle t)

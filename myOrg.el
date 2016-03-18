@@ -73,7 +73,7 @@
     (add-text-properties (match-beginning 0) (point-at-eol)
                          `(face (:foreground ,col)))))
 ; follow the link using enter
-(setq org-return-follows-link t)
+;; (setq org-return-follows-link t)
 
 (setq org-agenda-start-on-weekday 0)
 
@@ -85,7 +85,7 @@
     (beginning-of-line 0)
     (org-remove-empty-drawer-at "LOGBOOK" (point))))
 
-(add-hook 'org-clock-out-hook 'bh/remove-empty-drawer-on-clock-out 'append)
+;; (add-hook 'org-clock-out-hook 'bh/remove-empty-drawer-on-clock-out 'append)
 (require 'org-contacts)
 (setq org-contacts-files (quote ("~/Dropbox/org/contacts.org")))
 
@@ -95,3 +95,10 @@
 ;http://orgmode.org/manual/Code-evaluation-security.html
 (defun my-org-confirm-babel-evaluate (lang body)
   (not (string= lang "ditaa")))  ; don't ask for ditaa
+
+
+(defun org-pass-link-to-system (link) (if (string-match "^[a-zA-Z0-9]+:" link) (browse-url link) nil) )
+(add-hook 'org-open-link-functions 'org-pass-link-to-system)
+
+(require 'org)
+(org-add-link-type "evernote" nil '(lambda (path desc frmt) (format "<a href=\"evernote:%s\">%s</a>" path desc)))

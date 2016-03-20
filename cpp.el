@@ -1,6 +1,6 @@
-(add-to-list 'load-path "~/dotspacemacs/semantic-refactor")
-(require 'srefactor)
-(require 'srefactor-lisp)
+;; (add-to-list 'load-path "~/dotspacemacs/semantic-refactor")
+;; (require 'srefactor)
+;; (require 'srefactor-lisp)
 
 ;; OPTIONAL: ADD IT ONLY IF YOU USE C/C++. 
 (semantic-mode 1) ;; -> this is optional for Lisp

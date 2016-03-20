@@ -19,3 +19,7 @@
 (defalias 'todo 'open-my-todo-list)
 (defalias 'keys 'my-key-binds)
 (defalias 'note 'open-notes-dir)
+
+(defalias 'mon 'montessori-phone)
+(defalias 'leo 'leo-gp)
+(defalias 'thomas 'thomas-tax)

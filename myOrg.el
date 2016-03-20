@@ -1,3 +1,6 @@
+(load "~/dotspacemacs/org-journal.el")
+(load "~/dotspacemacs/org-download/org-download.el")
+
 (setq org-src-fontify-natively t)
 (setq org-startup-with-inline-images t)
 (setq org-agenda-files (quote ("~/Dropbox/org/gtd/"
@@ -6,7 +9,6 @@
                                "~/Dropbox/org/birthday.org"
                                "~/codingOrg/Leetcode/index.org"
                                "~/notesOrg/javascript/js.org")))
-(load "~/dotspacemacs/org-journal.el")
 (setq org-journal-dir "~/Dropbox/org/journalOrg/")
 (setq org-directory "~/Dropbox/org")
 (setq org-default-notes-file "~/Dropbox/org/Inbox.org")
@@ -102,3 +104,16 @@
 
 (require 'org)
 (org-add-link-type "evernote" nil '(lambda (path desc frmt) (format "<a href=\"evernote:%s\">%s</a>" path desc)))
+
+(defun kdm/html2org-clipboard ()
+  "Convert clipboard contents from HTML to Org and then paste (yank)."
+  (interactive)
+  (kill-new
+   (shell-command-to-string "osascript -e 'the clipboard as \"HTML\"' | perl -ne 'print chr foreach unpack(\"C*\",pack(\"H*\",substr($_,11,-3)))' | pandoc -f html -t json | pandoc -f json -t org --no-wrap"))
+  (yank)
+)
+
+;; This one is for the beginning char
+(setcar org-emphasis-regexp-components " \t('\" {")
+;; This one is for the ending char.
+(setcar (nthcdr 1 org-emphasis-regexp-components) "- \t.,: !?;'\")}\\")

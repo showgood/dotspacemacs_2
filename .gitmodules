@@ -22,3 +22,6 @@
 [submodule "super-save"]
 	path = super-save
 	url = https://github.com/bbatsov/super-save
+[submodule "org-download"]
+	path = org-download
+	url = https://github.com/abo-abo/org-download

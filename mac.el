@@ -27,6 +27,8 @@
 (keyfreq-autosave-mode 1)
 
 (load "~/dotspacemacs/projectile.el")
+(load "~/dotspacemacs/cpp.el")
+(load "~/Dropbox/myEmacs/contacts.el")
 ;; (require 'company)
 
 ;; ;; (add-hook 'after-init-hook 'global-company-mode)
@@ -62,3 +64,5 @@
 ;;    (t
 ;;     (add-to-list 'company-backends 'company-ispell)
 ;;     (message "company-ispell enabled!"))))
+
+(setq diredp-hide-details-initially-flag nil)

@@ -31,6 +31,7 @@
 
 (load "~/dotspacemacs/projectile.el")
 (load "~/dotspacemacs/cpp.el")
+(load "~/Dropbox/myEmacs/contacts.el")
 ;; (load "~/dotspacemacs/super-save/super-save.el")
 
 ;; (super-save-mode +1)

@@ -13,3 +13,9 @@
 [submodule "org-download"]
 	path = org-download
 	url = https://github.com/abo-abo/org-download
+[submodule "visual-regexp"]
+	path = visual-regexp
+	url = https://github.com/benma/visual-regexp.el
+[submodule "visual-regexp-steroids"]
+	path = visual-regexp-steroids
+	url = https://github.com/benma/visual-regexp-steroids.el

@@ -184,25 +184,25 @@ Version 2015-06-12"
    "[^A-Za-z0-9]+"))
 (defun underscore-string (s) (mapconcat 'downcase   (split-name s) "_"))
 
-(defun put-in-src-block (type)
-  (yank)
-  (let
-      ((prefix "")
-       (postfix "")
-       (result ""))
-  (cond
-   ((string= type "e")
-    (setq prefix "#+BEGIN_EXAMPLE")
-    (setq posfix "#+END_EXAMPLE")
-   (setq result (concat prefix "\n" (substring-no-properties (current-kill 0)) postfx))
-   (message result))
-   ((string= type "s")
-    (setq prefix "#+BEGIN_SRC")
-    (setq postfix "#+END_SRC")
-   (t (message "wrong choice"))
-   )
-  )
-  )
+;; (defun put-in-src-block (type)
+;;   (yank)
+;;   (let
+;;       ((prefix "")
+;;        (postfix "")
+;;        (result ""))
+;;   (cond
+;;    ((string= type "e")
+;;     (setq prefix "#+BEGIN_EXAMPLE")
+;;     (setq posfix "#+END_EXAMPLE")
+;;    (setq result (concat prefix "\n" (substring-no-properties (current-kill 0)) postfx))
+;;    (message result))
+;;    ((string= type "s")
+;;     (setq prefix "#+BEGIN_SRC")
+;;     (setq postfix "#+END_SRC")
+;;    (t (message "wrong choice"))
+;;    )
+;;   )
+;;   )
 
 ;; #+BEGIN_SRC elisp
 

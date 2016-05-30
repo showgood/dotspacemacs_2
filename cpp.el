@@ -17,9 +17,6 @@
 ;; Install hook to use clang-format on save
 (add-hook 'before-save-hook 'clang-format-before-save)
 
-(add-to-list 'load-path "~/dotspacemacs/cpputils-cmake-20160313.1658/")
-(require 'cpputils-cmake)
-
 (add-hook 'c-mode-common-hook
           (lambda ()
             (if (derived-mode-p 'c-mode 'c++-mode)
@@ -32,10 +29,3 @@
                 '(lambda ()(interactive) (gud-gdb (concat "gdb --fullname " (cppcm-get-exe-path-current-buffer)))))
 ;; OPTIONAL, some users need specify extra flags forwarded to compiler
 ;; (setq cppcm-extra-preprocss-flags-from-user '("-I/usr/src/linux/include" "-DNDEBUG"))
-(add-to-list 'load-path "~/dotspacemacs/emacs-cmake-project/")
-(require 'cmake-project)
-
-(defun maybe-cmake-project-hook ()
-  (if (file-exists-p "CMakeLists.txt") (cmake-project-mode)))
-(add-hook 'c-mode-hook 'maybe-cmake-project-hook)
-(add-hook 'c++-mode-hook 'maybe-cmake-project-hook)

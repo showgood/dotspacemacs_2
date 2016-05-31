@@ -69,4 +69,3 @@
 
 (setq diredp-hide-details-initially-flag nil)
 (load "~/dotspacemacs/shell.el")
-(setq projectile-indexing-method 'native)

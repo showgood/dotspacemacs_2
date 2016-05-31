@@ -66,3 +66,6 @@
 ;;     (message "company-ispell enabled!"))))
 
 (setq diredp-hide-details-initially-flag nil)
+
+(add-to-list 'load-path "~/dotspacemacs/swiper/")
+(load "~/dotspacemacs/swiper-helm/swiper-helm.el")

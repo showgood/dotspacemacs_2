@@ -1,5 +1,6 @@
 (load "~/dotspacemacs/org-journal.el")
 (load "~/dotspacemacs/org-download/org-download.el")
+(load "~/dotspacemacs/org-fstree.el")
 
 (setq org-src-fontify-natively t)
 (setq org-startup-with-inline-images t)

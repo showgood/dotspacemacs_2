@@ -3,7 +3,7 @@
 (load "~/dotspacemacs/myOrg.el")
 ;; (set-face-attribute 'default nil :font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 ;; (set-frame-font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1" nil t)
-;; (load "~/dotspacemacs/eshell.mac.el")
+(load "~/dotspacemacs/eshell.linux.el")
 
 (load "~/dotspacemacs/abbrev")
 (load "~/dotspacemacs/runCurrentFile.el")
@@ -68,3 +68,5 @@
 ;;     (message "company-ispell enabled!"))))
 
 (setq diredp-hide-details-initially-flag nil)
+(load "~/dotspacemacs/shell.el")
+(setq projectile-indexing-method 'native)

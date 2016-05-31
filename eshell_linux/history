@@ -1,0 +1,101 @@
+pwd
+cd
+ls
+git clone https://showgood@bitbucket.org/showgood/myorg.git notesOrg
+git clone https://showgood@bitbucket.org/showgood/myorg.git notesOrg
+git clone https://showgood@bitbucket.org/showgood/myorg.git notesOrg
+ls
+cd notesOrg/
+ls
+cd emacs/
+ls
+ff frequent.org 
+cd /
+ls
+cd mnt
+ls
+cd /
+cd
+ls
+clear
+
+pwd
+mkdir share
+sudo mount -t vboxsf workarea ~/share
+ls
+cd share/
+ls
+ls
+cp -r AstralHome/ ~/
+cd ..
+cd AstralHome/
+ls
+du -hs
+rm -rf build
+ls
+du -sh
+rm standard.zip 
+ls
+ls -la
+ff makefile 
+ls
+mkdir soft
+ls
+cd share/
+ls
+cp plantuml.8041.jar ~/soft
+ls
+cd
+cd soft
+ls
+git init .
+gst .
+ga plantuml.8041.jar 
+gst .
+gcmsg "add plantuml"
+cd ..
+mv soft/ soft__
+git clone https://github.com/showgood/soft.git soft
+cd soft
+ls
+cp ../soft__/plantuml.8041.jar .
+ls
+gst .
+ga plantuml.8041.jar 
+gcmsg "add plantuml"
+git push
+ls
+git branch -a
+git checkout -b windows
+ls
+cd ~/share
+cd workarea
+ls
+cp SharpKeys.exe ~/soft
+ls
+cp Greenshot-INSTALLER-1.2.8.12-RELEASE.exe ~/soft
+cp graphviz-2.38.msi ~/soft
+cd
+cd soft
+gst .
+ga SharpKeys.exe 
+gcmsg "add SharpKeys which is used to map caps lock to control on windows"
+ga Greenshot-INSTALLER-1.2.8.12-RELEASE.exe 
+gcmsg "add greenshot which is screen capture tool"
+ga graphviz-2.38.msi 
+gcmsg "add graphviz which is used by plantuml"
+gst .
+git push origin master
+git push -u origin windows
+ls
+cp ~/share/MobaXterm_v9.0\ \(1\).zip .
+ls
+mv MobaXterm_v9.0\ \(1\).zip MobaXterm_v9.0.zip
+ls
+ga MobaXterm_v9.0.zip 
+gcmsg "add MobaXterm - a terminal with X-server"
+cp ~/share/HxD.exe .
+gst .
+ga HxD.exe 
+gcmsg "add HxD - a binary editor"
+git push -u origin windows

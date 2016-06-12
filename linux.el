@@ -1,3 +1,10 @@
+(load "~/dotspacemacs/abbrev")
+(load "~/dotspacemacs/shell_abbrev")
+(load "~/dotspacemacs/alias")
+(load "~/dotspacemacs/gnus")
+(load "~/dotspacemacs/visual-regexp/visual-regexp.el")
+(load "~/dotspacemacs/visual-regexp-steroids/visual-regexp-steroids.el")
+(load "~/dotspacemacs/company.el")
 (global-linum-mode t)
 (global-company-mode t)
 (load "~/dotspacemacs/myOrg.el")
@@ -69,3 +76,10 @@
 
 (setq diredp-hide-details-initially-flag nil)
 (load "~/dotspacemacs/shell.el")
+(load "~/dotspacemacs/ggtags.el")
+(load "~/dotspacemacs/keyfreq.el")
+(require 'keyfreq)
+(keyfreq-mode 1)
+(keyfreq-autosave-mode 1)
+(load "~/dotspacemacs/rtags.el")
+

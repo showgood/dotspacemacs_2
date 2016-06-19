@@ -1,3 +1,6 @@
+(load "~/dotspacemacs/exec-path-from-shell/exec-path-from-shell.el")
+(exec-path-from-shell-initialize)
+
 (load "~/dotspacemacs/abbrev")
 (load "~/dotspacemacs/shell_abbrev")
 (load "~/dotspacemacs/alias")

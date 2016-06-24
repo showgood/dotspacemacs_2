@@ -1,9 +1,9 @@
 (add-to-list 'load-path "~/dotspacemacs/bookmark-plus/")
 (global-linum-mode t)
 (global-company-mode t)
-(load "~/dotspacemacs/myOrg.el")
-(set-face-attribute 'default nil :font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
-(set-frame-font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1" nil t)
+;; (load "~/dotspacemacs/myOrg.el")
+;; (set-face-attribute 'default nil :font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+;; (set-frame-font "-*-Monaco-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1" nil t)
 (load "~/dotspacemacs/eshell.win.el")
 
 (load "~/dotspacemacs/abbrev")
@@ -18,10 +18,10 @@
 (load "~/dotspacemacs/ggtags.el")
 (load "~/dotspacemacs/helm-dash/helm-dash.el")
 (load "~/dotspacemacs/typeless.el")
-(load "~/dotspacemacs/sr-speedbar.el")
+;; (load "~/dotspacemacs/sr-speedbar.el")
 (require 'switch-window)
 (require 'bookmark+)
-(require 'sr-speedbar)
+;; (require 'sr-speedbar)
 
 (load "~/dotspacemacs/myhydra.el")
 (load "~/dotspacemacs/keyfreq.el")
@@ -31,9 +31,13 @@
 
 (load "~/dotspacemacs/projectile.el")
 (load "~/dotspacemacs/cpp.el")
-(load "~/Dropbox/myEmacs/contacts.el")
-(load "~/dotspacemacs/tools.el")
+(load "~/dotspacemacs/tramp_win.el")
+
+;; (load "~/Dropbox/myEmacs/contacts.el")
+;; (load "~/dotspacemacs/tools.el")
 ;; (load "~/dotspacemacs/super-save/super-save.el")
 
 ;; (super-save-mode +1)
 ;; (setq super-save-auto-save-when-idle t)
+
+(setq magit-git-executable "c:/Program Files (x86)/GIT/cmd/git.exe")
